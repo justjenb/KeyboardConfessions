@@ -1,0 +1,92 @@
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Keyboard Confessions</title>
+    <link rel='stylesheet' href='/css/jass.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+    <link
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'
+      rel='stylesheet'
+      integrity='sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM'
+      crossorigin='anonymous'
+    />
+    <script
+      src='https://kit.fontawesome.com/c8c696bf68.js'
+      crossorigin='anonymous'
+    ></script>
+  </head>
+  <body>
+    <div class='flex-row justify-space-around'>
+      <header
+        class='d-flex justify-content-between align-items-center py-3 mb-4 w-100 px-3'
+      >
+        <div class='d-flex align-items-left'>
+          <img
+            src='/images/keyboard2.png'
+            class='img-fluid me-2'
+            alt='Responsive image'
+          />
+          <h1 id='title' class='align-self-end'>Keyboard<br />Confessions</h1>
+        </div>
+        <nav class='navbar navbar-expand-lg navbar-light bg-light w-25 px-3'>
+          <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+            <ul class='navbar-nav mr-auto px-3'>
+              <li class='nav-item active'>
+                <button class='btn primary me-2' id='home'><a
+                    href='/'
+                    class='nav-link'
+                  >Home</a></button>
+              </li>
+              {{#if logged_in}}
+                <li class='nav-item'>
+                  <button class='btn primary me-2' id='profile'><a
+                      href='/profile'
+                      class='nav-link'
+                    >Profile</a></button>
+                </li>
+                <li class='nav-item'>
+                  <button class='btn primary me-2' id='logout'><a
+                      href='/'
+                      class='nav-link'
+                    >Logout</a></button>
+                </li>
+              {{else}}
+                <li class='nav-item'>
+                  <button class='btn primary me-2' id='login'><a
+                      href='/login'
+                      class='nav-link'
+                    >Log in</a></button>
+                </li>
+                <li class='nav-item'>
+                  <button class='btn primary me-2' id='signup'><a
+                      href='/signup'
+                      class='nav-link'
+                    >Sign up</a></button>
+                </li>
+              {{/if}}
+              <li class='nav-item'>
+                <button class='btn primary me-2' id='about'><a
+                    href='/about'
+                    class='nav-link'
+                  >About</a></button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class='container container-fluid mt-5'>
+        {{{body}}}
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+  </body>
+
+</html>

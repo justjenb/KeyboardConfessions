@@ -1,0 +1,72 @@
+[
+  {
+    "name": "JSON for the win",
+    "content": "JSON is the best!",
+    "comments": [
+      {
+        "username": "Sal",
+        "comment": "Agreed!"
+      },
+      {
+        "username": "Jane",
+        "comment": "Can't wait to see this in action."
+      }    
+    ]
+  },
+  {
+    "name": "The beauty of CSS",
+    "content": "CSS makes web beautiful!",
+    "comments": [
+      {
+        "username": "Lernantino",
+        "comment": "CSS is indeed beautiful."
+      },
+      {
+        "username": "John",
+        "comment": "I love playing with CSS."
+      }    
+    ]
+  },
+  {
+    "name": "Javascript Promises",
+    "content": "Understanding Promises in Javascript",
+    "comments": [
+      {
+        "username": "Amiko",
+        "comment": "Promises are very useful!"
+      },
+      {
+        "username": "Sal",
+        "comment": "I'm still trying to understand promises."
+      }    
+    ]
+  },
+  {
+    "name": "Node.js Streams",
+    "content": "Learning about streams in Node.js.",
+    "comments": [
+      {
+        "username": "John",
+        "comment": "Streams are a great feature of Node.js."
+      },
+      {
+        "username": "Jane",
+        "comment": "I'm still trying to understand streams."
+      }    
+    ]
+  },
+  {
+    "name": "Machine Learning for beginners",
+    "content": "An introductory guide to Machine Learning.",
+    "comments": [
+      {
+        "username": "Lernantino",
+        "comment": "I'm excited about machine learning!"
+      },
+      {
+        "username": "Amiko",
+        "comment": "Looking forward to more posts on this topic."
+      }    
+    ]
+  }
+]
