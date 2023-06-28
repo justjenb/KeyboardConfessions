@@ -1,0 +1,53 @@
+[
+    {
+      "username": "Sal",
+      "content": "Agreed!",
+      "blogpost_id": 1
+    },
+    {
+      "username": "Jane",
+      "content": "Can't wait to see this in action.",
+      "blogpost_id": 1
+    },
+    {
+      "username": "Lernantino",
+      "content": "CSS is indeed beautiful.",
+      "blogpost_id": 2
+    },
+    {
+      "username": "John",
+      "content": "I love playing with CSS.",
+      "blogpost_id": 2
+    },
+    {
+      "username": "Amiko",
+      "content": "Promises are very useful!",
+      "blogpost_id": 3
+    },
+    {
+      "username": "Sal",
+      "content": "I'm still trying to understand promises.",
+      "blogpost_id": 3
+    },
+    {
+      "username": "John",
+      "content": "Streams are a great feature of Node.js.",
+      "blogpost_id": 4
+    },
+    {
+      "username": "Jane",
+      "content": "I'm still trying to understand streams.",
+      "blogpost_id": 4
+    },
+    {
+      "username": "Lernantino",
+      "content": "I'm excited about machine learning!",
+      "blogpost_id": 5
+    },
+    {
+      "username": "Amiko",
+      "content": "Looking forward to more posts on this topic.",
+      "blogpost_id": 5
+    }
+  ]
+  

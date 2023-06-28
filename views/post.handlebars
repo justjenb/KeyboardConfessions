@@ -5,4 +5,38 @@
   <p>{{content}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
 </div>
+
+{{#if comments.length}}
+  <h3>Comments:</h3>
+  {{#each comments}}
+    <div class="card">
+      <div class="card-body">
+        <p>{{user.name}} on {{format_date date_created}}:</p>
+        <p>{{content}}</p>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  {{#if logged_in}}
+    <h3>No comments available.</h3>
+  {{/if}}
+{{/if}}
+
+{{#if logged_in}}
+  <h3>Add a Comment:</h3>
+  <form class="comment-form" method="POST" action="/api/posts/{{id}}/comments">
+    <div class="form-group">
+      <label for="comment-content">Comment:</label>
+      <textarea class="form-control" id="comment-content" name="content"></textarea>
+    </div>
+    <input type="hidden" name="blogpost_id" value="{{id}}">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{{else}}
+  <h3>Add a Comment:</h3>
+  <button class='btn primary me-2' id='login'>
+    <a href='/login' class='nav-link'>Log in to add a comment</a>
+  </button>
+{{/if}}
+
 <div class="col-md-3"></div>

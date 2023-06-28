@@ -1,6 +1,20 @@
 const router = require('express').Router();
-const { BlogPost } = require('../../models');
+const { BlogPost, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+router.get('/', async (req, res) => {
+  try {
+    const blogPostData = await BlogPost.findAll({
+      include: {
+        model: Comment,
+        attributes: ['id', 'content', 'date_created', 'user_id', 'blogpost_id'],
+      },
+    });
+    res.status(200).json(blogPostData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -9,7 +23,24 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newBlogPost);
+    res.status(200).json({ url: `/posts/${newBlogPost.id}` });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+
+router.post('/:id/comments', withAuth, async (req, res) => {
+  try {
+    const newComment = await Comment.create({
+      ...req.body,
+      user_id: req.session.user_id,
+      blogpost_id: req.body.blogpost_id,
+    });
+
+    const postId = req.params.id;
+    res.redirect(`/posts/${postId}`);
+
   } catch (err) {
     res.status(400).json(err);
   }
